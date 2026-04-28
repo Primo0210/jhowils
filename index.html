@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primo — Photography Portfolio</title>
+    <meta name="description"
+        content="Primo's photography portfolio — cinematic portraits, street photography, and creative visual storytelling. Based in the Philippines.">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Cursor glow effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Loading screen -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="loader-shutter">
+                <div class="shutter-blade"></div>
+                <div class="shutter-blade"></div>
+                <div class="shutter-blade"></div>
+                <div class="shutter-blade"></div>
+                <div class="shutter-blade"></div>
+                <div class="shutter-blade"></div>
+            </div>
+            <span class="loader-text">PRIMO</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav" id="mainNav">
+            <a href="#hero" class="nav-logo" id="navLogo">
+                <span class="logo-text">PRIMO</span>
+                <span class="logo-dot"></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#gallery" class="nav-link" data-section="gallery">Gallery</a></li>
+                <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <div class="nav-socials">
+                <a href="https://www.facebook.com/jhowils.kaiklian" target="_blank" rel="noopener noreferrer"
+                    class="social-link" id="socialFacebook" aria-label="Facebook">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="https://www.instagram.com/ign.primo/" id="socialInstagram" aria-label="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="#" class="https://www.tiktok.com/@ign.primo" id="socialTiktok" aria-label="TikTok">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.73a8.19 8.19 0 0 0 4.76 1.52v-3.4a4.85 4.85 0 0 1-1-.16z" />
+                    </svg>
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu-links">
+            <li><a href="#hero" class="mobile-link" data-section="hero">Home</a></li>
+            <li><a href="#about" class="mobile-link" data-section="about">About</a></li>
+            <li><a href="#gallery" class="mobile-link" data-section="gallery">Gallery</a></li>
+            <li><a href="#services" class="mobile-link" data-section="services">Services</a></li>
+            <li><a href="#contact" class="mobile-link" data-section="contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-socials">
+            <a href="https://www.facebook.com/jhowils.kaiklian" target="_blank" rel="noopener noreferrer"
+                aria-label="Facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+            </a>
+            <a href="#" aria-label="https://www.instagram.com/ign.primo/">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <a href="#" aria-label="TikTok">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.73a8.19 8.19 0 0 0 4.76 1.52v-3.4a4.85 4.85 0 0 1-1-.16z" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-bg">
+                <img src="assets/img/IMG_3006.jpg" alt="Primo — Cinematic portrait photography" class="hero-bg-img">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-tag">
+                    <span class="tag-line"></span>
+                    <span class="tag-text">Visual Storyteller</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="hero-title-line">
+                        <span class="hero-title-word" style="--delay: 0.1s">The painter</span>
+                    </span>
+                    <span class="hero-title-line">
+                        <span class="hero-title-word" style="--delay: 0.2s">constructs,</span>
+                        <span class="hero-title-word hero-title-italic" style="--delay: 0.3s">the photographer</span>
+                    </span>
+                    <span class="hero-title-line">
+                        <span class="hero-title-word hero-title-outline" style="--delay: 0.4s">discloses.</span>
+                    </span>
+                </h1>
+                <p class="hero-description">Cinematic portraits & street photography that tell stories through color,
+                    light, and emotion.</p>
+                <div class="hero-actions">
+                    <a href="#gallery" class="btn btn-primary" id="heroViewWork">
+                        <span>View My Work</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-outline" id="heroContact">Book a Session</a>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator" id="scrollIndicator">
+                <span class="scroll-text">Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image-wrapper reveal-left">
+                        <div class="about-image">
+                            <img src="assets/img/IMG_1319.jpg" alt="Primo — Portrait photographer" loading="lazy">
+                            <div class="about-image-border"></div>
+                        </div>
+                        <div class="about-experience">
+                            <span class="experience-number">7+</span>
+                            <span class="experience-text">Years of<br>Experience</span>
+                        </div>
+                    </div>
+                    <div class="about-content reveal-right">
+                        <div class="section-tag">
+                            <span class="tag-line"></span>
+                            <span class="tag-text">About Me</span>
+                        </div>
+                        <h2 class="section-title">Where Light Meets Emotion<br><em>Through the Lens</em></h2>
+                        <p class="about-text">
+                            Hi, I’m Jhowils but you can call me Primo, with a deep love for cinematography as both an
+                            art and a hobby, passionate about cinematic portraits and street photography.
+
+                            I’m drawn to the contrast of neon lights, urban textures, and the raw emotion found in
+                            unfiltered moments. My work is all about capturing stories as they naturally unfold,
+                            blending atmosphere with authenticity.
+
+
+                        </p>
+                        <p class="about-text">
+                            For me, every shoot is a collaboration. I work with both natural and artificial light to
+                            create images that feel alive moody, vibrant, and uniquely yours. Whether it’s during
+                            golden hour or in the middle of a city night, I aim to bring intention, emotion, and a
+                            cinematic touch to every frame.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <span class="stat-number" data-target="150">0</span><span class="stat-suffix">+</span>
+                                <span class="stat-label">Photos Delivered</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" data-target="30">0</span><span class="stat-suffix">+</span>
+                                <span class="stat-label">Happy Clients</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Gallery Section -->
+        <section class="video-gallery section" id="video-gallery">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <div class="section-tag">
+                        <span class="tag-line"></span>
+                        <span class="tag-text">Cinematography</span>
+                    </div>
+                    <h2 class="section-title">Film <em>Project</em></h2>
+                    <p class="section-subtitle">Motion and storytelling through cinematic video.</p>
+                </div>
+                <div class="video-wrapper reveal-up">
+                    <video controls preload="metadata">
+                        <source src="assets/img/Film Project.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery section" id="gallery">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <div class="section-tag">
+                        <span class="tag-line"></span>
+                        <span class="tag-text">Portfolio</span>
+                    </div>
+                    <h2 class="section-title">Primo's <em>Archive</em></h2>
+                    <p class="section-subtitle">Browse by category to find the style that fits your vision.</p>
+                </div>
+
+                <!-- Service-Aligned Filter Buttons -->
+                <div class="gallery-filters reveal-up" id="galleryFilters">
+                    <button class="filter-btn active" data-filter="all">All Work</button>
+                    <button class="filter-btn" data-filter="people">People &amp; Portraits</button>
+                    <button class="filter-btn" data-filter="nature">Landscape &amp; Nature</button>
+                    <button class="filter-btn" data-filter="architecture">Architecture &amp; Travel</button>
+                </div>
+
+                <div class="gallery-grid" id="galleryGrid">
+
+                    <!-- ═══════ PEOPLE & PORTRAITS ═══════ -->
+                    <div class="gallery-category-label reveal-up" data-category="people">
+                        <span class="category-label-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>
+                        </span>
+                        <span class="category-label-text">People &amp; Portraits</span>
+                        <span class="category-label-count">8 photos</span>
+                        <span class="category-label-line"></span>
+                    </div>
+
+                    <div class="gallery-item gallery-item-tall reveal-up" data-category="people" style="--delay: 0.05s">
+                        <img src="assets/img/88e8d10f-62a9-439e-b73c-2f22459aea9c.jpg"
+                            alt="Night portrait with neon lighting" loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <span class="gallery-item-category">Portrait</span>
+                            <h3 class="gallery-item-title">Neon Nights</h3>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item reveal-up" data-category="people" style="--delay: 0.1s">
+                        <img src="assets/img/IMG_1203.jpg" alt="Golden hour outdoor portrait" loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <span class="gallery-item-category">Portrait</span>
+                            <h3 class="gallery-item-title">Golden Hour</h3>
+                        </div>
+                    </div>
+
+
+
+                    <div class="gallery-item gallery-item-wide reveal-up" data-category="people" style="--delay: 0.2s">
+                        <img src="assets/img/IMG_2770.jpg" alt="Family at the beach with turquoise water"
+                            loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <span class="gallery-item-category">Family</span>
+                            <h3 class="gallery-item-title">Island Bliss</h3>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item gallery-item-tall reveal-up" data-category="people" style="--delay: 0.25s">
+                        <img src="assets/img/IMG_2680.jpg" alt="Woman in market with neon lights" loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <span class="gallery-item-category">Street Portrait</span>
+                            <h3 class="gallery-item-title">Market Glow</h3>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item reveal-up" data-category="people" style="--delay: 0.3s">
+                        <img src="assets/img/IMG_1235.jpg" alt="Youth sitting on sidewalk at blue hour" loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <span class="gallery-item-category">Street Portrait</span>
+                            <h3 class="gallery-item-title">Quiet Moments</h3>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item gallery-item-tall reveal-up" data-category="people" style="--delay: 0.35s">
+                        <img src="assets/img/IMG_1319.jpg" alt="Street portrait at night with neon" loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <span class="gallery-item-category">Street Portrait</span>
+                            <h3 class="gallery-item-title">Urban Walk</h3>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item reveal-up" data-category="people" style="--delay: 0.4s">
+                        <img src="assets/img/1.jpg" alt="Portrait perfection" loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <span class="gallery-item-category">Portrait</span>
+                            <h3 class="gallery-item-title">Perfection</h3>
+                        </div>
+                    </div>
+
+                    <!-- ═══════ LANDSCAPE & NATURE ═══════ -->
+                    <div class="gallery-category-label reveal-up" data-category="nature">
+                        <span class="category-label-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2" />
+                                <path d="m12 3 7 14H5Z" />
+                            </svg>
+                        </span>
+                        <span class="category-label-text">Landscape &amp; Nature</span>
+                        <span class="category-label-count">3 photos</span>
+                        <span class="category-label-line"></span>
+                    </div>
+
+                    <div class="gallery-item gallery-item-wide reveal-up" data-category="nature" style="--delay: 0.05s">
+                        <img src="assets/img/IMG_3023.jpg" alt="Misty Chocolate Hills landscape" loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <span class="gallery-item-category">Landscape</span>
+                            <h3 class="gallery-item-title">Chocolate Hills</h3>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item reveal-up" data-category="nature" style="--delay: 0.1s">
+                        <img src="assets/img/IMG_3006.jpg" alt="Blue butterfly on plant stem" loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <span class="gallery-item-category">Wildlife</span>
+                            <h3 class="gallery-item-title">Wings of Blue</h3>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item reveal-up" data-category="nature" style="--delay: 0.15s">
+                        <img src="assets/img/IMG_0888.jpg" alt="Church at dusk with moody sky" loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <span class="gallery-item-category">Scenic</span>
+                            <h3 class="gallery-item-title">Sacred Ground</h3>
+                        </div>
+                    </div>
+
+                    <!-- ═══════ ARCHITECTURE & TRAVEL ═══════ -->
+                    <div class="gallery-category-label reveal-up" data-category="architecture">
+                        <span class="category-label-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="4" y="2" width="16" height="20" rx="2" />
+                                <path d="M9 22v-4h6v4" />
+                                <path d="M8 6h.01" />
+                                <path d="M16 6h.01" />
+                                <path d="M12 6h.01" />
+                                <path d="M12 10h.01" />
+                                <path d="M12 14h.01" />
+                                <path d="M16 10h.01" />
+                                <path d="M16 14h.01" />
+                                <path d="M8 10h.01" />
+                                <path d="M8 14h.01" />
+                            </svg>
+                        </span>
+                        <span class="category-label-text">Architecture &amp; Travel</span>
+                        <span class="category-label-count">4 photos</span>
+                        <span class="category-label-line"></span>
+                    </div>
+
+                    <div class="gallery-item gallery-item-tall reveal-up" data-category="architecture"
+                        style="--delay: 0.05s">
+                        <img src="assets/img/IMG_2513.jpg" alt="Grand classical architecture with statues"
+                            loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <span class="gallery-item-category">Architecture</span>
+                            <h3 class="gallery-item-title">Temple of Art</h3>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item reveal-up" data-category="architecture" style="--delay: 0.1s">
+                        <img src="assets/img/IMG_2618.jpg" alt="Classical columns and corridor" loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <span class="gallery-item-category">Architecture</span>
+                            <h3 class="gallery-item-title">Pillared Passage</h3>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item reveal-up" data-category="architecture" style="--delay: 0.15s">
+                        <img src="assets/img/IMG_0901.jpg" alt="Airplane at airport during golden hour" loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <span class="gallery-item-category">Travel</span>
+                            <h3 class="gallery-item-title">Departure</h3>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item reveal-up" data-category="architecture" style="--delay: 0.2s">
+                        <img src="assets/img/IMG_1393.jpg" alt="Travel scenery" loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <span class="gallery-item-category">Framing</span>
+                            <h3 class="gallery-item-title">Echoes of Street</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services section" id="services">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <div class="section-tag">
+                        <span class="tag-line"></span>
+                        <span class="tag-text">What I Offer</span>
+                    </div>
+                    <h2 class="section-title">Photography <em>Services</em></h2>
+                    <p class="section-subtitle">From portraits to events — tailored sessions that match your vision.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card reveal-up" style="--delay: 0.1s">
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Portrait Sessions</h3>
+                        <p class="service-text">Individual or group portrait sessions with cinematic color grading and
+                            creative direction.</p>
+                        <span class="service-number">01</span>
+                    </div>
+                    <div class="service-card reveal-up" style="--delay: 0.2s">
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Event Coverage</h3>
+                        <p class="service-text">Capturing the energy and emotion of your special moments — parties,
+                            graduations, and celebrations.</p>
+                        <span class="service-number">02</span>
+                    </div>
+                    <div class="service-card reveal-up" style="--delay: 0.3s">
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z">
+                                </path>
+                                <circle cx="12" cy="13" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Street Photography</h3>
+                        <p class="service-text">Raw, unscripted moments on the streets — stories told through light,
+                            shadow, and urban textures.</p>
+                        <span class="service-number">03</span>
+                    </div>
+                    <div class="service-card reveal-up" style="--delay: 0.4s">
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Creative Direction</h3>
+                        <p class="service-text">Full concept development — from mood boards and location scouting to
+                            styling and post-production.</p>
+                        <span class="service-number">04</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info reveal-left">
+                        <div class="section-tag">
+                            <span class="tag-line"></span>
+                            <span class="tag-text">Get in Touch</span>
+                        </div>
+                        <h2 class="section-title">Let's create<br><em>something beautiful</em></h2>
+                        <p class="contact-text">Have a project in mind? Want to book a session? I'd love to hear from
+                            you. Drop me a message and let's make it happen.</p>
+                        <div class="contact-details">
+                            <div class="contact-detail">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <span>primolegaspi10@gmail.com</span>
+                            </div>
+                            <div class="contact-detail">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Kawit, Cavite, Philippines</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper reveal-right">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="formName" class="form-label">Name</label>
+                                <input type="text" id="formName" class="form-input" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="formEmail" class="form-label">Email</label>
+                                <input type="email" id="formEmail" class="form-input" placeholder="your@email.com"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="formService" class="form-label">Service</label>
+                                <select id="formService" class="form-input form-select">
+                                    <option value="" disabled selected>Select a service</option>
+                                    <option value="portrait">Portrait Session</option>
+                                    <option value="event">Event Coverage</option>
+                                    <option value="street">Street Photography</option>
+                                    <option value="creative">Creative Direction</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="formMessage" class="form-label">Message</label>
+                                <textarea id="formMessage" class="form-input form-textarea"
+                                    placeholder="Tell me about your project..." rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full" id="formSubmit">
+                                <span>Send Message</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#hero" class="nav-logo">
+                        <span class="logo-text">PRIMO</span>
+                        <span class="logo-dot"></span>
+                    </a>
+                    <p class="footer-tagline">Capturing moments, creating memories.</p>
+                </div>
+                <div class="footer-links-group">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4 class="footer-heading">Socials</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.facebook.com/jhowils.kaiklian" target="_blank"
+                                rel="noopener noreferrer">Facebook</a></li>
+                        <li><a href="#">https://www.instagram.com/ign.primo/</a></li>
+                        <li><a href="#">https://www.tiktok.com/@ign.primo</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Primo. All rights reserved.</p>
+                <p class="footer-credit">Designed with passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
+        <img src="" alt="" class="lightbox-img" id="lightboxImg">
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
